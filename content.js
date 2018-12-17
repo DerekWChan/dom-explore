@@ -1,3 +1,8 @@
+// Removes tooltip when clicked
+const closeTooltip = () => {
+  this.remove();
+};
+
 // Listens for user input from the extension then makes every matching Element
 // clickable, displaying a tooltip containing its attributes
 chrome.runtime.onMessage.addListener(msg => {
@@ -12,7 +17,7 @@ chrome.runtime.onMessage.addListener(msg => {
       }
       event.target.insertAdjacentHTML(
         'beforebegin',
-        `<span class="dom-explore_tooltip">${tooltipText}</span>`);
+        `<div class="dom-explore_tooltip" onclick="(${closeTooltip})();">${tooltipText}</div>`);
       event.preventDefault(); // Stops links from redirecting, etc.
     };
   });

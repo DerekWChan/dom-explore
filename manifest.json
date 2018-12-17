@@ -3,11 +3,14 @@
   "version": "1.0",
   "author": "Derek Chan",
   "description": "Find a DOM element and explore its properties!",
-  "permissions": ["activeTab", "storage"],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {

@@ -8,12 +8,12 @@ chrome.runtime.onMessage.addListener(msg => {
     node.onclick = () => { // Create tooltips to display when clicked
       let tooltipText = '';
       for(attr of node.attributes) {
-        tooltipText += `${attr.name}: ${attr.value}<br>`;
+        tooltipText += `<b><i>${attr.name}</i></b>: <i>${attr.value}</i><br>`;
       }
       event.target.insertAdjacentHTML(
         'beforebegin',
         `<span class="dom-explore_tooltip">${tooltipText}</span>`);
-      event.preventDefault(); // Stops links from directing, etc.
+      event.preventDefault(); // Stops links from redirecting, etc.
     };
   });
 });

@@ -1,12 +1,16 @@
 .dom-explore_selected {
-  border: 1px solid red;
+  border: 1px dashed red !important;
 }
 
 .dom-explore_tooltip {
   position: absolute;
   z-index: 100;
-  padding: 10px;
+  margin-top: 24px;
+  padding: 12px;
   border-radius: 10px;
   color: white;
   background-color: #333;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
 }

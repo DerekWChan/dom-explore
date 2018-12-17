@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(msg => {
     // Stylize each element so that they're easier to see
     node.className += node.className === '' ? 'dom-explore_selected' : ' dom-explore_selected';
     node.onclick = () => { // Create tooltips to display when clicked
-      let tooltipText = '';
+      let tooltipText = `<i>< ${node.tagName.toLowerCase()} ></i><br>`;
       for(attr of node.attributes) {
         tooltipText += `<b><i>${attr.name}</i></b>: <i>${attr.value}</i><br>`;
       }

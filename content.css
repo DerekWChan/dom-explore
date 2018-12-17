@@ -1,3 +1,12 @@
-.selected {
+.dom-explore_selected {
   border: 1px solid red;
+}
+
+.dom-explore_tooltip {
+  position: absolute;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #333;
 }
